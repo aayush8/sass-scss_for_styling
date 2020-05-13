@@ -1,0 +1,36 @@
+$btn-color: green;
+$btn-bg: black;
+$theme: blue;
+
+@import '_header';
+
+@mixin btn($bgcolor, $color) {
+    padding: 1rem;
+    background-color: $bgcolor;
+    color: $color;
+    font-size: 1.2rem;
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#btn{
+    @include btn(black, white);
+}
+
+body {
+    background-color: $theme;
+}
+
+#root {
+    background-color: white;
+    padding: 1rem;
+}
+
+#body {
+    @extend  #header;
+    margin-top: 1rem;
+    color: red;
+    font-size: 1.5rem;
+    width: 75vw;
+}
+
